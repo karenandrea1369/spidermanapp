@@ -1,0 +1,33 @@
+.inicio{
+    width: 100%;
+    height: 640px;
+    background-color: rgb(201, 201, 91);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+}
+
+.inicio__img{
+    height: 60%;
+    margin: 20px 0 10px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.inicio__copy{
+    margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+    .inicio{
+        height: 630px;
+        background-color: rgb(201, 201, 91);
+    }
+
+    .inicio__img{
+        height: 55%;
+    }
+    
+  }

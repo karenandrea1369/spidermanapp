@@ -1,0 +1,9 @@
+.back{
+    background: none;
+    border: none;
+    width: 80px;
+}
+
+.back__img{
+    width: 100%;
+}
