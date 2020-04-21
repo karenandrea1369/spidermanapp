@@ -27,8 +27,8 @@ const Create = (props) => {
             <div className="create">
                 <div className="create__character">
                     <p>{context.config.name}</p>
-                    <div className="character__accesory1">
-                        <img />
+                    <div className="character__accessory1">
+                        {context.config.accessory1 && <img src = '/data/accessory1.png'/>}
                     </div>
                     <div className="create__head">
                         <img src={context.config.actor}/>
@@ -36,11 +36,11 @@ const Create = (props) => {
                     <div className="create__body">
                         <img src="/data/cuerpo.png"/>
                     </div>
-                    <div className="character__accesory2">
-                        <img />
+                    <div className="character__accessory2">
+                        {context.config.accessory2 && <img src = '/data/accessory2.png'/>}
                     </div>
-                    <div className="character__accesory3">
-                        <img />
+                    <div className="character__accessory3">
+                        {context.config.accessory3 && <img src = '/data/accessory3.png'/>}
                     </div>
 
                 </div>

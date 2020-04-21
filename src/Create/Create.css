@@ -55,7 +55,7 @@
     width: 100%;
 }
 
-.character__accesory1{
+.character__accessory1{
     position: absolute;
     /* background-color: crimson; */
     z-index: -1;
@@ -63,7 +63,7 @@
     height: 200px;
 }
 
-.character__accesory2{
+.character__accessory2{
     position: absolute;
     top: 30px;
     /* background-color:blue; */
@@ -71,7 +71,7 @@
     height: 20px;
 }
 
-.character__accesory3{
+.character__accessory3{
     position: absolute;
     top: 130px;
     /* background-color: pink; */

@@ -1,11 +1,6 @@
 import * as React from 'react';
 
 export const SpidermanContext = React.createContext({
-    // id : '',
-    // name : '',
-    // actor : '',
-    // setName : () => null,
-    // setActor : () => null,
     config : {
         id : '',
         name : '',

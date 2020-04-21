@@ -9,10 +9,6 @@ import { v4 } from 'uuid';
 
 function App() {
 
-  // const [id , setId ] = React.useState(v4());
-  // const [name , setName ] = React.useState('');
-  // const [actor , setActor ] = React.useState('/data/tobey.png');
-
   const [config, setConfig] = React.useState({
     id : v4(),
     name : '',
@@ -24,11 +20,6 @@ function App() {
   })
 
   const value = {
-    // id : id,
-    // name : name,
-    // actor : actor,
-    // setName : setName,
-    // setActor : setActor,
     config : config,
     setConfig : setConfig,
   }
