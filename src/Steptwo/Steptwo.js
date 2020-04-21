@@ -6,6 +6,13 @@ const Steptwo = (props) => {
 
     const context = React.useContext(SpidermanContext);
 
+    const handleMask = (event) => {
+        context.setConfig({
+            ...context.config,
+            mask : !context.config.mask,
+        })
+    };
+
     const handleAccessory1 = (event) => {
         context.setConfig({
             ...context.config,
@@ -30,7 +37,7 @@ const Steptwo = (props) => {
     return(
         <div>
             <p>MÁSCARA</p>
-            <input type="checkbox"/>
+            <input type="checkbox" onChange={handleMask}/>
             <p>ACCESORIOS</p>
             <button className="stepone__facebtn" onClick={handleAccessory1}>
                 <img src="/data/btnAccessory1.png" />
