@@ -4,10 +4,10 @@ import './Steptwo.css';
 const Steptwo = (props) => {
     return(
         <div>
-            <p>ALTO</p>
-            <input type="range" />
-            <p>PESO</p>
-            <input type="range" />
+            <p>MÁSCARA</p>
+            <input type="checkbox"/>
+            <p>ACCESORIOS</p>
+            
 
         </div>
     );

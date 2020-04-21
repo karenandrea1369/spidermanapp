@@ -6,8 +6,13 @@ import Stepone from '../Stepone/Stepone';
 import Steptwo from '../Steptwo/Steptwo';
 import Stepthree from '../Stepthree/Stepthree';
 import Stepfour from '../Stepfour/Stepfour';
+import { SpidermanContext } from '../utils/SpidermanContext';
+
 
 const Create = (props) => {
+
+    const context = React.useContext(SpidermanContext);
+
     return (
         <div>
             <div className="create__header">
@@ -21,7 +26,23 @@ const Create = (props) => {
 
             <div className="create">
                 <div className="create__character">
-                    <img src="/data/character.png"/>
+                    <p>{context.config.name}</p>
+                    <div className="character__accesory1">
+                        <img />
+                    </div>
+                    <div className="create__head">
+                        <img src={context.config.actor}/>
+                    </div>
+                    <div className="create__body">
+                        <img src="/data/cuerpo.png"/>
+                    </div>
+                    <div className="character__accesory2">
+                        <img />
+                    </div>
+                    <div className="character__accesory3">
+                        <img />
+                    </div>
+
                 </div>
 
                 <div className="create__options">

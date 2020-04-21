@@ -23,16 +23,63 @@
     display: flex;
 }
 
+/* --------------- CREATE CHARACTER ---------------*/
 .create__character{
     width: 40%;
     height: 100%;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-.create__character img{
-    width: 30%;
+.create__head{
+    width: 10%;
+    height: 15%;
 }
+
+.create__head img{
+    width: 100%;
+}
+
+.create__body{
+    width: 30%;
+    height: 85%;
+    position: relative;
+    top: -10px;
+    left: 2px;
+}
+
+.create__body img{
+    width: 100%;
+}
+
+.character__accesory1{
+    position: absolute;
+    /* background-color: crimson; */
+    z-index: -1;
+    width: 200px;
+    height: 200px;
+}
+
+.character__accesory2{
+    position: absolute;
+    top: 30px;
+    /* background-color:blue; */
+    width: 60px;
+    height: 20px;
+}
+
+.character__accesory3{
+    position: absolute;
+    top: 130px;
+    /* background-color: pink; */
+    width: 200px;
+    height: 100px;
+}
+
+/* --------------- FIN CREATE CHARACTER ---------------*/
 
 .create__options{
     width: 45%;
