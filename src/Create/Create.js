@@ -32,7 +32,7 @@ const Create = (props) => {
                     </div>
                     <div className="create__head">
                         {context.config.mask && <img src = '/data/cabeza.png'/>}
-                        {!context.config.mask && <img src={context.config.actor}/>}
+                        {!context.config.mask && <img src= {'/data/' + context.config.actor + '.png'} />}
                     </div>
                     <div className="create__body">
                         <img src="/data/cuerpo.png"/>

@@ -12,11 +12,14 @@ function App() {
   const [config, setConfig] = React.useState({
     id : v4(),
     name : '',
-    actor : '/data/tobey.png',
-    mask : false,
+    actor : 'tobey',
+    mask : 'unchecked',
     accessory1 : false,
     accessory2 : false,
     accessory3 : false,
+    suit : 1,
+    colorOne : 'red',
+    colorTwo : 'blue',
   })
 
   const value = {

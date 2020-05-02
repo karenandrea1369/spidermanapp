@@ -7,3 +7,7 @@
 .stepone__facebtn img{
     width: 100%;
 }
+
+.button__selected{
+    border: olive 2px solid;
+}

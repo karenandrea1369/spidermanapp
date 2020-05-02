@@ -9,6 +9,9 @@ export const SpidermanContext = React.createContext({
         accessory1 : false,
         accessory2 : false,
         accessory3 : false,
+        suit : 1,
+        colorOne : '',
+        colorTwo : '',
       },
     setConfig : () => null,
 })
