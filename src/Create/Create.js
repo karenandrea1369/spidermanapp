@@ -28,7 +28,19 @@ const Create = (props) => {
             <div className="create">
                 
                 <div className="create__character">
-                    <Spiderman />
+                    <Spiderman 
+                        id = {context.config.id}
+                        name = {context.config.name}
+                        actor = {context.config.actor} 
+                        mask = {context.config.mask} 
+                        accessory1 = {context.config.accessory1} 
+                        accessory2 = {context.config.accessory2} 
+                        accessory3 = {context.config.accessory3} 
+                        suit = {context.config.suit} 
+                        colorOne = {context.config.colorOne} 
+                        colorTwo = {context.config.colorTwo} 
+                        fondo = {context.config.fondo} 
+                    />
                 </div>
 
                 <div className="create__options">

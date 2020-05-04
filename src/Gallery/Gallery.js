@@ -1,11 +1,13 @@
 import React from 'react';
 import './Gallery.css';
 import { Link , Route} from 'react-router-dom';
+import { SpidermanContext } from '../utils/SpidermanContext';
 import Back from '../Back/Back';
 import Btn from '../Btn/Btn';
 
 const Gallery = (props) => {
-    
+
+    const context = React.useContext(SpidermanContext);
     const btn1 = "CREA UNO";
 
     return (
@@ -24,26 +26,11 @@ const Gallery = (props) => {
                     <img className="module__img" src="/data/inicio.png"/>
                     <p className="module__name">NOMBRE DEL PERSONAJE</p>
                 </div>
-                <div className="module">
-                    <img className="module__img" src="/data/inicio.png"/>
-                    <p className="module__name">NOMBRE DEL PERSONAJE</p>
-                </div>
-                <div className="module">
-                    <img className="module__img" src="/data/inicio.png"/>
-                    <p className="module__name">NOMBRE DEL PERSONAJE</p>
-                </div>
-                <div className="module">
-                    <img className="module__img" src="/data/inicio.png"/>
-                    <p className="module__name">NOMBRE DEL PERSONAJE</p>
-                </div>
-                <div className="module">
-                    <img className="module__img" src="/data/inicio.png"/>
-                    <p className="module__name">NOMBRE DEL PERSONAJE</p>
-                </div>
-                <div className="module">
-                    <img className="module__img" src="/data/inicio.png"/>
-                    <p className="module__name">NOMBRE DEL PERSONAJE</p>
-                </div>
+                
+                {context.list.map(spidy => {
+                    
+                })}
+
             </div>
 
              {/* --------------- EMPTY STATE --------------- */}

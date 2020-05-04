@@ -10,33 +10,33 @@ const Spiderman = (props) => {
     return(
         <div className="spiderman__container">
             <div className="spiderman__charactername">
-                <p>{context.config.name}</p>
+                <p>{props.name}</p>
             </div>
 
             <div className="spiderman__background">
                 <img className="spiderman__backgroundimg" 
-                src={'/data/fondo' + context.config.fondo + '.png'}/>
+                src={'/data/fondo' + props.fondo + '.png'}/>
 
                 <div className="spiderman__body" >
                     <div className="character__accessory1">
-                        {context.config.accessory1 && <img src = '/data/accessory1.png'/>}
+                        {props.accessory1 && <img src = '/data/accessory1.png'/>}
                     </div>
                     <div className="spiderman__head">
-                        {context.config.mask && 
-                        <img src = {'/data/mascara' + context.config.suit + '_color' + context.config.colorOne + '.png'}/>}
-                        {!context.config.mask && <img src= {'/data/' + context.config.actor + '.png'} />}
+                        {props.mask && 
+                        <img src = {'/data/mascara' + props.suit + '_color' + props.colorOne + '.png'}/>}
+                        {!props.mask && <img src= {'/data/' + props.actor + '.png'} />}
                     </div>
                     <div className="spiderman__color1">
-                        <img src={'/data/traje' + context.config.suit + '_parte1_color' + context.config.colorOne + '.png'}/>
+                        <img src={'/data/traje' + props.suit + '_parte1_color' + props.colorOne + '.png'}/>
                     </div>
                     <div className="spiderman__color2">
-                        <img src={'/data/traje' + context.config.suit + '_parte2_color' + context.config.colorTwo + '.png'}/>
+                        <img src={'/data/traje' + props.suit + '_parte2_color' + props.colorTwo + '.png'}/>
                     </div>
                     <div className="character__accessory2">
-                        {context.config.accessory2 && <img src = '/data/accessory2.png'/>}
+                        {props.accessory2 && <img src = '/data/accessory2.png'/>}
                     </div>
                     <div className="character__accessory3">
-                        {context.config.accessory3 && <img src = '/data/accessory3.png'/>}
+                        {props.accessory3 && <img src = '/data/accessory3.png'/>}
                     </div>
 
                 </div>
