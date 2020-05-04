@@ -43,15 +43,6 @@ const Stepone = (props) => {
 
             <p>MÁSCARA</p>
             <input type="checkbox" onChange={handleMask} checked={context.config.mask}/>
-
-            
-
-            {/* <button className="stepone__facebtn" onClick={()=>handleActor('andrew')}>
-                <img src="/data/andrew.png"/>
-            </button>
-            <button className="stepone__facebtn" onClick={()=>handleActor('tom')}>
-                <img src="/data/tom.png"/>
-            </button> */}
         </div>
     );
 

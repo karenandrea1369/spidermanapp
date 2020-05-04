@@ -18,8 +18,8 @@ function App() {
     accessory2 : false,
     accessory3 : false,
     suit : 1,
-    colorOne : 'red',
-    colorTwo : 'blue',
+    colorOne : 'rojo',
+    colorTwo : 'azul',
   })
 
   const value = {

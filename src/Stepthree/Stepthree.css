@@ -1,9 +1,42 @@
-.stepone__suitbtn{
-    width: 20%;
-    background: none;
-    margin: 20px;
+.stepthree__suits{
+    display: flex;
 }
 
-.stepone__suitbtn img{
+.stepthree__suitbtn{
+
+    margin: 15px;
+}
+
+.stepthree__suitbtn button{
     width: 100%;
+    background: none;
+}
+
+.stepthree__suitbtn img{
+    width: 100%;
+}
+
+.stepthree__suitbtn--selected{
+
+    border: olive 2px solid;
+}
+
+.stepthree__colors{
+    display: flex;
+}
+
+.stepthree__colorbuttons{
+    display: flex;
+    width: 50%;
+}
+
+.stepthree__colorbtn{
+    background: none;
+    border: none;
+    margin: 8px;
+    border-radius: 30px;
+}
+
+.stepthree__colorbtn--selected{
+    border: olive 2px solid;
 }

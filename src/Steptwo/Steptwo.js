@@ -4,6 +4,8 @@ import { SpidermanContext } from '../utils/SpidermanContext';
 
 const Steptwo = (props) => {
 
+    var actors = ['tobey', 'andrew', 'tom'];
+
     const context = React.useContext(SpidermanContext);
 
     const handleActor = (actor) => {
@@ -55,40 +57,37 @@ const Steptwo = (props) => {
             <p>ESCOGE TU ACTOR FAVORITO</p>
             {!context.config.mask && context.config.actor === 'tobey' &&
             <button className="stepone__facebtn button__selected" onClick={()=>handleActor('tobey')}>
-                <img src="/data/tobey.png" />
+                <img src="/data/tobeybtn.png" />
             </button>
             }
 
-            {/* {context.config.actor !== 'tobey' && */}
             {(context.config.mask || context.config.actor !== 'tobey') &&
             <button className="stepone__facebtn" onClick={()=>handleActor('tobey')}>
-                <img src="/data/tobey.png" />
+                <img src="/data/tobeybtn.png" />
             </button>
             }
 
             {!context.config.mask && context.config.actor === 'andrew' &&
             <button className="stepone__facebtn button__selected" onClick={()=>handleActor('andrew')}>
-                <img src="/data/andrew.png" />
+                <img src="/data/andrewbtn.png" />
             </button>
             }
 
-            {/* {context.config.actor !== 'andrew' && */}
             {(context.config.mask || context.config.actor !== 'andrew') &&
             <button className="stepone__facebtn" onClick={()=>handleActor('andrew')}>
-                <img src="/data/andrew.png" />
+                <img src="/data/andrewbtn.png" />
             </button>
             }
 
             {!context.config.mask && context.config.actor === 'tom' &&
             <button className="stepone__facebtn button__selected" onClick={()=>handleActor('tom')}>
-                <img src="/data/tom.png" />
+                <img src="/data/tombtn.png" />
             </button>
             }
 
-            {/* {context.config.actor !== 'tom' && */}
             {(context.config.mask || context.config.actor !== 'tom') &&
             <button className="stepone__facebtn" onClick={()=>handleActor('tom')}>
-                <img src="/data/tom.png" />
+                <img src="/data/tombtn.png" />
             </button>
             }
 
