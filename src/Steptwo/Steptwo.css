@@ -1,0 +1,21 @@
+.steptwo__actors{
+    display: flex;
+}
+
+.steptwo__actorbtn{
+    width: 20%;
+    margin: 20px;
+}
+
+.steptwo__facebtn{
+    width: 100%;
+    background: none;
+}
+
+.steptwo__facebtn img{
+    width: 100%;
+}
+
+.steptwo__facebtn--selected{
+    border: olive 2px solid;
+}

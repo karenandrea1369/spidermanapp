@@ -1,0 +1,21 @@
+.stepfour__bgs{
+    display: flex;
+}
+
+.stepfour__bgbtn{
+    width: 30%;
+    margin: 15px;
+}
+
+.stepfour__bgbtn--selected{
+    border: olivedrab 2px solid;
+}
+
+.stepfour__bgbtn button{
+    width: 100%;
+    background: none;
+}
+
+.stepfour__bgbtn img{
+    width: 100%;
+}

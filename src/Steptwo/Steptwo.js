@@ -5,6 +5,7 @@ import { SpidermanContext } from '../utils/SpidermanContext';
 const Steptwo = (props) => {
 
     var actors = ['tobey', 'andrew', 'tom'];
+    var accesories = [1, 2, 3];
 
     const context = React.useContext(SpidermanContext);
 
@@ -31,11 +32,21 @@ const Steptwo = (props) => {
         }
     };
 
+    const handleAccessory = (accesory) => {
+        var acce = 'accessory' + accesory;
+        var acceState = 'context.config.accessory' + accesory;
+        console.log(acceState);
+            context.setConfig({
+             ...context.config,
+             acce : !acceState,
+         })
+    };
+
     const handleAccessory1 = (event) => {
-        context.setConfig({
-            ...context.config,
-            accessory1 : !context.config.accessory1,
-        })
+            context.setConfig({
+             ...context.config,
+             accessory1 : !context.config.accessory1,
+         })
     };
 
     const handleAccessory2 = (event) => {
@@ -55,41 +66,24 @@ const Steptwo = (props) => {
     return(
         <div>
             <p>ESCOGE TU ACTOR FAVORITO</p>
-            {!context.config.mask && context.config.actor === 'tobey' &&
-            <button className="stepone__facebtn button__selected" onClick={()=>handleActor('tobey')}>
-                <img src="/data/tobeybtn.png" />
-            </button>
-            }
 
-            {(context.config.mask || context.config.actor !== 'tobey') &&
-            <button className="stepone__facebtn" onClick={()=>handleActor('tobey')}>
-                <img src="/data/tobeybtn.png" />
-            </button>
-            }
+            <div className="steptwo__actors">
+                {actors.map(actor =>{
+                    return <div className="steptwo__actorbtn">               
+                        {!context.config.mask && context.config.actor === actor &&
+                        <button className="steptwo__facebtn steptwo__facebtn--selected" onClick={()=>handleActor(actor)}>
+                            <img src={'/data/' + actor + 'btn.png'} />
+                        </button>
+                        }
 
-            {!context.config.mask && context.config.actor === 'andrew' &&
-            <button className="stepone__facebtn button__selected" onClick={()=>handleActor('andrew')}>
-                <img src="/data/andrewbtn.png" />
-            </button>
-            }
-
-            {(context.config.mask || context.config.actor !== 'andrew') &&
-            <button className="stepone__facebtn" onClick={()=>handleActor('andrew')}>
-                <img src="/data/andrewbtn.png" />
-            </button>
-            }
-
-            {!context.config.mask && context.config.actor === 'tom' &&
-            <button className="stepone__facebtn button__selected" onClick={()=>handleActor('tom')}>
-                <img src="/data/tombtn.png" />
-            </button>
-            }
-
-            {(context.config.mask || context.config.actor !== 'tom') &&
-            <button className="stepone__facebtn" onClick={()=>handleActor('tom')}>
-                <img src="/data/tombtn.png" />
-            </button>
-            }
+                        {(context.config.mask || context.config.actor !== actor) &&
+                        <button className="steptwo__facebtn" onClick={()=>handleActor(actor)}>
+                            <img src={'/data/' + actor + 'btn.png'} />
+                        </button>
+                        }
+                    </div>
+                })}
+            </div>
 
             {/* ---------------Accesorios---------------- */}
 

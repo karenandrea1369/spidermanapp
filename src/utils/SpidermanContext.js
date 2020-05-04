@@ -12,6 +12,7 @@ export const SpidermanContext = React.createContext({
         suit : 1,
         colorOne : '',
         colorTwo : '',
+        fondo : 1,
       },
     setConfig : () => null,
 })

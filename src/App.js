@@ -11,7 +11,7 @@ function App() {
 
   const [config, setConfig] = React.useState({
     id : v4(),
-    name : '',
+    name : 'Mi primer Spiderman',
     actor : 'tobey',
     mask : 'unchecked',
     accessory1 : false,
@@ -20,6 +20,7 @@ function App() {
     suit : 1,
     colorOne : 'rojo',
     colorTwo : 'azul',
+    fondo : 1,
   })
 
   const value = {
