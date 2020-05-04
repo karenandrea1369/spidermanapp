@@ -13,7 +13,7 @@ function App() {
     id : v4(),
     name : 'Mi primer Spiderman',
     actor : 'tobey',
-    mask : 'unchecked',
+    mask : true,
     accessory1 : false,
     accessory2 : false,
     accessory3 : false,
