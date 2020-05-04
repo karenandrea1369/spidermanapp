@@ -1,6 +1,7 @@
 import React from 'react';
 import './Stepfour.css';
-import { SpidermanContext, useHistory } from '../utils/SpidermanContext';
+import { SpidermanContext } from '../utils/SpidermanContext';
+import { useHistory} from 'react-router-dom';
 
 const Stepfour = (props) => {
 
@@ -29,7 +30,7 @@ const Stepfour = (props) => {
                 accessory3 : context.config.accessory3,
                 suit : context.config.suit,
                 colorOne : context.config.colorOne,
-                colorTwo : colorTwo,
+                colorTwo : context.config.colorTwo,
                 fondo : context.config.fondo,
             }
         ]);
