@@ -1,10 +1,11 @@
 import React from 'react';
 import './Stepfour.css';
-import { SpidermanContext } from '../utils/SpidermanContext';
+import { SpidermanContext, useHistory } from '../utils/SpidermanContext';
 
 const Stepfour = (props) => {
 
     const context = React.useContext(SpidermanContext);
+    const history = useHistory();
 
     var bgs = [1,2,3];
 
@@ -13,6 +14,38 @@ const Stepfour = (props) => {
             ...context.config,
             fondo : fondo,
         })
+    };
+
+    const handleFinish = () => {
+        context.setList([
+            ...context.list,
+            {
+                id : context.config.id,
+                name : context.config.name,
+                actor : context.config.actor,
+                mask : context.config.mask,
+                accessory1 : context.config.accessory1,
+                accessory2 : context.config.accessory2,
+                accessory3 : context.config.accessory3,
+                suit : context.config.suit,
+                colorOne : context.config.colorOne,
+                colorTwo : colorTwo,
+                fondo : context.config.fondo,
+            }
+        ]);
+        context.setConfig({
+            name : 'Mi primer Spiderman',
+            actor : 'tobey',
+            mask : true,
+            accessory1 : false,
+            accessory2 : false,
+            accessory3 : false,
+            suit : 1,
+            colorOne : 'rojo',
+            colorTwo : 'azul',
+            fondo : 1,
+        });
+        history.push('/gallery');
     };
 
     return(
@@ -36,7 +69,7 @@ const Stepfour = (props) => {
                 })}
             </div>
 
-            <button>
+            <button onClick={handleFinish}>
                 FINALIZAR
             </button>
 

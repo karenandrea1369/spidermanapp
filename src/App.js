@@ -23,9 +23,13 @@ function App() {
     fondo : 1,
   })
 
+  const [list, setList] = React.useState([ ]);
+
   const value = {
     config : config,
     setConfig : setConfig,
+    list : list,
+    setList : setList,
   }
 
   return (

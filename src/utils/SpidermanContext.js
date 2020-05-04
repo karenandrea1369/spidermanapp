@@ -15,4 +15,7 @@ export const SpidermanContext = React.createContext({
         fondo : 1,
       },
     setConfig : () => null,
+
+    list : [],
+    setList : () => null,
 })
