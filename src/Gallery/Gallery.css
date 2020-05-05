@@ -19,6 +19,14 @@
 /* --------------- MODULE ---------------*/
 
 .gallery{
+    
+}
+
+.module__container{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
     display: flex;
     padding: 60px;
     flex-wrap: wrap;

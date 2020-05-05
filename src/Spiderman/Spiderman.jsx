@@ -5,7 +5,14 @@ import { SpidermanContext } from '../utils/SpidermanContext';
 
 const Spiderman = (props) => {
 
-    const context = React.useContext(SpidermanContext);
+//     const context = React.useContext(SpidermanContext);
+//     const handleEdit = (id)=>{
+//          onEdit(id);
+//     }
+
+//     const handleDelete = (id)=>{
+//         onEdit(id);
+//    }
 
     return(
         <div className="spiderman__container">
@@ -41,6 +48,11 @@ const Spiderman = (props) => {
 
                 </div>
             </div>
+
+            {/* {onDelete && onEdit && <div>
+                <button onClick = {handleEdit}>Edit</button>
+                <button onClick = {handleEdit}>Delete</button>
+            </div>} */}
         </div>
     );
 
@@ -58,6 +70,8 @@ Spiderman.propTypes = {
     colorOne : PropTypes.string,
     colorTwo : PropTypes.string,
     fondo : PropTypes.number,
+    // onEdit : PropTypes.func,
+    // onDelete : PropTypes.func,
 }
       
 export default Spiderman;

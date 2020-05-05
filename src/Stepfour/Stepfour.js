@@ -2,6 +2,7 @@ import React from 'react';
 import './Stepfour.css';
 import { SpidermanContext } from '../utils/SpidermanContext';
 import { useHistory} from 'react-router-dom';
+import { v4 } from 'uuid';
 
 const Stepfour = (props) => {
 
@@ -35,6 +36,7 @@ const Stepfour = (props) => {
             }
         ]);
         context.setConfig({
+            id : v4(),
             name : 'Mi primer Spiderman',
             actor : 'tobey',
             mask : true,
