@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dcbf3850a1379f2cc78e332615ace5a1",
+    "revision": "b820b8db905a5db9b684c93f052aad29",
     "url": "/spidermanapp/index.html"
   },
   {
-    "revision": "79f65367bfcfb37894ee",
+    "revision": "50e0ef7920ba79ad9fa2",
     "url": "/spidermanapp/static/css/main.5d3a3746.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/spidermanapp/static/js/2.244c58fa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79f65367bfcfb37894ee",
-    "url": "/spidermanapp/static/js/main.f32a9dd9.chunk.js"
+    "revision": "50e0ef7920ba79ad9fa2",
+    "url": "/spidermanapp/static/js/main.2ea61b6a.chunk.js"
   },
   {
     "revision": "eb308b663e82d0b9c537",
