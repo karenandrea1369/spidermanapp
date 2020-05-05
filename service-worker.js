@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/spidermanapp/precache-manifest.5800379b8203b0b90433e1334ef483de.js"
+  "/spidermanapp/precache-manifest.0900c13bf109c3b15197074727106637.js"
 );
 
 self.addEventListener('message', (event) => {

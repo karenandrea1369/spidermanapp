@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/spidermanapp/static/css/main.5d3a3746.chunk.css",
-    "main.js": "/spidermanapp/static/js/main.82e45d0e.chunk.js",
-    "main.js.map": "/spidermanapp/static/js/main.82e45d0e.chunk.js.map",
+    "main.js": "/spidermanapp/static/js/main.b1d7b2e8.chunk.js",
+    "main.js.map": "/spidermanapp/static/js/main.b1d7b2e8.chunk.js.map",
     "runtime-main.js": "/spidermanapp/static/js/runtime-main.3111c0db.js",
     "runtime-main.js.map": "/spidermanapp/static/js/runtime-main.3111c0db.js.map",
     "static/js/2.244c58fa.chunk.js": "/spidermanapp/static/js/2.244c58fa.chunk.js",
     "static/js/2.244c58fa.chunk.js.map": "/spidermanapp/static/js/2.244c58fa.chunk.js.map",
     "index.html": "/spidermanapp/index.html",
-    "precache-manifest.5800379b8203b0b90433e1334ef483de.js": "/spidermanapp/precache-manifest.5800379b8203b0b90433e1334ef483de.js",
+    "precache-manifest.0900c13bf109c3b15197074727106637.js": "/spidermanapp/precache-manifest.0900c13bf109c3b15197074727106637.js",
     "service-worker.js": "/spidermanapp/service-worker.js",
     "static/css/main.5d3a3746.chunk.css.map": "/spidermanapp/static/css/main.5d3a3746.chunk.css.map",
     "static/js/2.244c58fa.chunk.js.LICENSE.txt": "/spidermanapp/static/js/2.244c58fa.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.3111c0db.js",
     "static/js/2.244c58fa.chunk.js",
     "static/css/main.5d3a3746.chunk.css",
-    "static/js/main.82e45d0e.chunk.js"
+    "static/js/main.b1d7b2e8.chunk.js"
   ]
 }
