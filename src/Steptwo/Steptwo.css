@@ -19,3 +19,11 @@
 .steptwo__facebtn--selected{
     border: olive 2px solid;
 }
+
+.steptwo__accessories{
+    display: flex;
+}
+
+.steptwo__accessorybtn{
+    margin: 20px;
+}

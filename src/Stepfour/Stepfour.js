@@ -19,22 +19,20 @@ const Stepfour = (props) => {
     };
 
     const handleFinish = () => {
-        context.setList([
-            ...context.list,
-            {
-                id : v4(),
-                name : context.config.name,
-                actor : context.config.actor,
-                mask : context.config.mask,
-                accessory1 : context.config.accessory1,
-                accessory2 : context.config.accessory2,
-                accessory3 : context.config.accessory3,
-                suit : context.config.suit,
-                colorOne : context.config.colorOne,
-                colorTwo : context.config.colorTwo,
-                fondo : context.config.fondo,
-            }
-        ]);
+        const newSpidey = {
+            id : v4(),
+            name : context.config.name,
+            actor : context.config.actor,
+            mask : context.config.mask,
+            accessory1 : context.config.accessory1,
+            accessory2 : context.config.accessory2,
+            accessory3 : context.config.accessory3,
+            suit : context.config.suit,
+            colorOne : context.config.colorOne,
+            colorTwo : context.config.colorTwo,
+            fondo : context.config.fondo,
+        };
+
         context.setConfig({
             id : '',
             name : 'Mi primer Spiderman',
@@ -48,6 +46,23 @@ const Stepfour = (props) => {
             colorTwo : 'azul',
             fondo : 1,
         });
+
+        const index = context.list.findIndex((elem) => {
+            return elem.id === newSpidey.id;
+        });
+
+        if(index === -1){
+            context.setList([
+                ...context.list,
+                newSpidey,
+            ]);
+        } else {
+            context.setList([
+                ...context.list.slice(0,index),
+                newSpidey,
+                ...context.list.slice(index+1)
+            ]);
+        }
         history.push('/gallery');
     };
 

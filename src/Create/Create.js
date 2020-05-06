@@ -46,7 +46,7 @@ const Create = (props) => {
                 </div>
 
                 <div className="create__options">
-                    <Route path={["/crear", "/crear/pasouno"]} component={Stepone}/>
+                    <Route path={["/crear", "/crear/pasouno"]} exact component={Stepone}/>
                     <Route path="/crear/pasodos" component={Steptwo}/>
                     <Route path="/crear/pasotres" component={Stepthree}/>
                     <Route path="/crear/pasocuatro" component={Stepfour}/>

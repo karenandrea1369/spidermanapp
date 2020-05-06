@@ -67,7 +67,7 @@ const Steptwo = (props) => {
 
             <p>ACCESORIOS</p>
 
-            <div>
+            <div className="steptwo__accessories">
                 {accesories.map( accessory =>{
                     return <div className="steptwo__accessorybtn">
                         
@@ -85,52 +85,6 @@ const Steptwo = (props) => {
                     </div>
                 })}
             </div>
-
-            
-
-            {/* {context.config.accessory1 &&
-            <button className="stepone__facebtn button__selected" onClick={handleAccessory1}>
-                <img src="./data/btnAccessory1.png" />
-            </button>
-            }
-
-            {!context.config.accessory1 &&
-            <button className="stepone__facebtn " onClick={handleAccessory1}>
-                <img src="./data/btnAccessory1.png" />
-            </button>
-            }
-
-            {context.config.accessory2 &&
-            <button className="stepone__facebtn button__selected" onClick={handleAccessory2}>
-                <img src="./data/btnAccessory2.png" />
-            </button>
-            }
-
-            {!context.config.accessory2 &&
-            <button className="stepone__facebtn " onClick={handleAccessory2}>
-                <img src="./data/btnAccessory2.png" />
-            </button>
-            }
-
-            {context.config.accessory3 &&
-            <button className="stepone__facebtn button__selected" onClick={handleAccessory3}>
-                <img src="./data/btnAccessory3.png" />
-            </button>
-            }
-
-            {!context.config.accessory3 &&
-            <button className="stepone__facebtn " onClick={handleAccessory3}>
-                <img src="./data/btnAccessory3.png" />
-            </button>
-            } */}
-
-            {/* <button className="stepone__facebtn" onClick={handleAccessory2}>
-                <img src="./data/btnAccessory2.png" />
-            </button>
-            <button className="stepone__facebtn" onClick={handleAccessory3}>
-                <img src="./data/btnAccessory3.png" />
-            </button> */}
-
         </div>
     );
 

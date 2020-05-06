@@ -57,10 +57,7 @@ const Gallery = (props) => {
                                     colorOne = {spidey.colorOne} 
                                     colorTwo = {spidey.colorTwo} 
                                     fondo = {spidey.fondo}
-                                    // onEdit = {handleEditSpiderman}
-                                    // onDelete = {handleDeleteSpiderman}
                                 />
-                                
                             </div>
                             )
                         })}
