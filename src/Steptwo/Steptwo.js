@@ -32,36 +32,14 @@ const Steptwo = (props) => {
         }
     };
 
-    const handleAccessory = (accesory) => {
-        var acce = 'accessory' + accesory;
-        var acceState = 'context.config.accessory' + accesory;
-        console.log(acceState);
+    const handleAccessory = (accessory) => {
+        var acce = 'accessory' + accessory;
             context.setConfig({
              ...context.config,
-             acce : !acceState,
+             [acce] : !context.config[acce],
          })
     };
 
-    const handleAccessory1 = (event) => {
-            context.setConfig({
-             ...context.config,
-             accessory1 : !context.config.accessory1,
-         })
-    };
-
-    const handleAccessory2 = (event) => {
-        context.setConfig({
-            ...context.config,
-            accessory2 : !context.config.accessory2,
-        })
-    };
-
-    const handleAccessory3 = (event) => {
-        context.setConfig({
-            ...context.config,
-            accessory3 : !context.config.accessory3,
-        })
-    };
 
     return(
         <div>
@@ -72,13 +50,13 @@ const Steptwo = (props) => {
                     return <div className="steptwo__actorbtn">               
                         {!context.config.mask && context.config.actor === actor &&
                         <button className="steptwo__facebtn steptwo__facebtn--selected" onClick={()=>handleActor(actor)}>
-                            <img src={'/data/' + actor + 'btn.png'} />
+                            <img src={'./data/' + actor + 'btn.png'} />
                         </button>
                         }
 
                         {(context.config.mask || context.config.actor !== actor) &&
                         <button className="steptwo__facebtn" onClick={()=>handleActor(actor)}>
-                            <img src={'/data/' + actor + 'btn.png'} />
+                            <img src={'./data/' + actor + 'btn.png'} />
                         </button>
                         }
                     </div>
@@ -88,47 +66,69 @@ const Steptwo = (props) => {
             {/* ---------------Accesorios---------------- */}
 
             <p>ACCESORIOS</p>
-            {context.config.accessory1 &&
+
+            <div>
+                {accesories.map( accessory =>{
+                    return <div className="steptwo__accessorybtn">
+                        
+                        {context.config['accessory' + accessory] &&
+                            <button className="stepone__facebtn button__selected" onClick={()=>handleAccessory(accessory)}>
+                                <img src={'./data/btnAccessory' + accessory + '.png'} />
+                            </button>
+                        }
+
+                        {!context.config['accessory' + accessory] &&
+                            <button className="stepone__facebtn " onClick={()=>handleAccessory(accessory)}>
+                                <img src={'./data/btnAccessory' + accessory + '.png'} />
+                            </button>
+                        }
+                    </div>
+                })}
+            </div>
+
+            
+
+            {/* {context.config.accessory1 &&
             <button className="stepone__facebtn button__selected" onClick={handleAccessory1}>
-                <img src="/data/btnAccessory1.png" />
+                <img src="./data/btnAccessory1.png" />
             </button>
             }
 
             {!context.config.accessory1 &&
             <button className="stepone__facebtn " onClick={handleAccessory1}>
-                <img src="/data/btnAccessory1.png" />
+                <img src="./data/btnAccessory1.png" />
             </button>
             }
 
             {context.config.accessory2 &&
             <button className="stepone__facebtn button__selected" onClick={handleAccessory2}>
-                <img src="/data/btnAccessory2.png" />
+                <img src="./data/btnAccessory2.png" />
             </button>
             }
 
             {!context.config.accessory2 &&
             <button className="stepone__facebtn " onClick={handleAccessory2}>
-                <img src="/data/btnAccessory2.png" />
+                <img src="./data/btnAccessory2.png" />
             </button>
             }
 
             {context.config.accessory3 &&
             <button className="stepone__facebtn button__selected" onClick={handleAccessory3}>
-                <img src="/data/btnAccessory3.png" />
+                <img src="./data/btnAccessory3.png" />
             </button>
             }
 
             {!context.config.accessory3 &&
             <button className="stepone__facebtn " onClick={handleAccessory3}>
-                <img src="/data/btnAccessory3.png" />
+                <img src="./data/btnAccessory3.png" />
             </button>
-            }
+            } */}
 
             {/* <button className="stepone__facebtn" onClick={handleAccessory2}>
-                <img src="/data/btnAccessory2.png" />
+                <img src="./data/btnAccessory2.png" />
             </button>
             <button className="stepone__facebtn" onClick={handleAccessory3}>
-                <img src="/data/btnAccessory3.png" />
+                <img src="./data/btnAccessory3.png" />
             </button> */}
 
         </div>

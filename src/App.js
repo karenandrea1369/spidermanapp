@@ -10,7 +10,7 @@ import { v4 } from 'uuid';
 function App() {
 
   const [config, setConfig] = React.useState({
-    id : v4(),
+    id : '',
     name : 'Mi primer Spiderman',
     actor : 'tobey',
     mask : true,
@@ -37,8 +37,8 @@ function App() {
       <SpidermanContext.Provider value = {value}>
         <Router>
           <Route path="/" exact component={Home}/>
-          <Route path="/gallery" component={Gallery}/>
-          <Route path="/create" component={Create}/>
+          <Route path="/galeria" component={Gallery}/>
+          <Route path="/crear/:step?" component={Create}/>
         </Router>
       </SpidermanContext.Provider>
     </div>

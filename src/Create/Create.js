@@ -14,6 +14,8 @@ const Create = (props) => {
 
     const context = React.useContext(SpidermanContext);
 
+    console.log(props.match);
+
     return (
         <div>
             <div className="create__header">
@@ -21,7 +23,7 @@ const Create = (props) => {
                     <Link to="/"><Back /></Link>
                 </div>
                 <div className="create__tittle">
-                    <img src="/data/crea.png"/>
+                    <img src="./data/crea.png"/>
                 </div>
             </div>
 
@@ -44,18 +46,18 @@ const Create = (props) => {
                 </div>
 
                 <div className="create__options">
-                    <Route path="/create/stepone" component={Stepone}/>
-                    <Route path="/create/steptwo" component={Steptwo}/>
-                    <Route path="/create/stepthree" component={Stepthree}/>
-                    <Route path="/create/stepfour" component={Stepfour}/>
+                    <Route path={["/crear", "/crear/pasouno"]} component={Stepone}/>
+                    <Route path="/crear/pasodos" component={Steptwo}/>
+                    <Route path="/crear/pasotres" component={Stepthree}/>
+                    <Route path="/crear/pasocuatro" component={Stepfour}/>
                 </div>
                 
                 <div className="create__menu">
 
-                    <Link to="/create/stepone"><img src="/data/createbtn.png"/></Link>
-                    <Link to="/create/steptwo"><img src="/data/createbtn.png"/></Link>
-                    <Link to="/create/stepthree"><img src="/data/createbtn.png"/></Link>
-                    <Link to="/create/stepfour"><img src="/data/createbtn.png"/></Link>
+                    <Link to="/crear/pasouno"><img src="./data/createbtn.png"/></Link>
+                    <Link to="/crear/pasodos"><img src="./data/createbtn.png"/></Link>
+                    <Link to="/crear/pasotres"><img src="./data/createbtn.png"/></Link>
+                    <Link to="/crear/pasocuatro"><img src="./data/createbtn.png"/></Link>
                     
                 </div>
             </div>

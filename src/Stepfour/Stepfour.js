@@ -22,7 +22,7 @@ const Stepfour = (props) => {
         context.setList([
             ...context.list,
             {
-                id : context.config.id,
+                id : v4(),
                 name : context.config.name,
                 actor : context.config.actor,
                 mask : context.config.mask,
@@ -36,7 +36,7 @@ const Stepfour = (props) => {
             }
         ]);
         context.setConfig({
-            id : v4(),
+            id : '',
             name : 'Mi primer Spiderman',
             actor : 'tobey',
             mask : true,
@@ -59,13 +59,13 @@ const Stepfour = (props) => {
                     return <div className="stepfour__bgbtn">               
                         {context.config.fondo === bg && 
                             <button className="stepfour__bgbtn--selected" onClick={()=>handleBg(bg)}>
-                                <img src={'/data/fondo' + bg + '.png'}/>
+                                <img src={'./data/fondo' + bg + '.png'}/>
                             </button>
                         }
 
                         {context.config.fondo !== bg && 
                             <button onClick={()=>handleBg(bg)}>
-                                <img src={'/data/fondo' + bg + '.png'}/>
+                                <img src={'./data/fondo' + bg + '.png'}/>
                             </button>
                         }
                     </div>

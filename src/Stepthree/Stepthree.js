@@ -38,13 +38,13 @@ const Stepthree = (props) => {
                     return <div className="stepthree__suitbtn">               
                         {context.config.suit === suit && 
                             <button className="stepthree__suitbtn--selected" onClick={()=>handleSuit(suit)}>
-                                <img src={'/data/suit' + suit + '.png'}/>
+                                <img src={'./data/suit' + suit + '.png'}/>
                             </button>
                         }
 
                         {context.config.suit !== suit && 
                             <button onClick={()=>handleSuit(suit)}>
-                                <img src={'/data/suit' + suit + '.png'}/>
+                                <img src={'./data/suit' + suit + '.png'}/>
                             </button>
                         }
                     </div>
@@ -60,13 +60,13 @@ const Stepthree = (props) => {
                             return <div className="stepthree__colorbtn">               
                                 {context.config.colorOne === col && 
                                     <button className="stepthree__colorbtn--selected" onClick={()=>handleColorOne(col)}>
-                                        <img src={'/data/' + col + 'btn.png'}/>
+                                        <img src={'./data/' + col + 'btn.png'}/>
                                     </button>
                                 }
 
                                 {context.config.colorOne !== col && 
                                     <button onClick={()=>handleColorOne(col)}>
-                                        <img src={'/data/' + col + 'btn.png'}/>
+                                        <img src={'./data/' + col + 'btn.png'}/>
                                     </button>
                                 }
                             </div>
@@ -80,13 +80,13 @@ const Stepthree = (props) => {
                             return <div className="stepthree__colorbtn">               
                                 {context.config.colorTwo === col && 
                                     <button className="stepthree__colorbtn--selected" onClick={()=>handleColorTwo(col)}>
-                                        <img src={'/data/' + col + 'btn.png'}/>
+                                        <img src={'./data/' + col + 'btn.png'}/>
                                     </button>
                                 }
 
                                 {context.config.colorTwo !== col && 
                                     <button onClick={()=>handleColorTwo(col)}>
-                                        <img src={'/data/' + col + 'btn.png'}/>
+                                        <img src={'./data/' + col + 'btn.png'}/>
                                     </button>
                                 }
                             </div>

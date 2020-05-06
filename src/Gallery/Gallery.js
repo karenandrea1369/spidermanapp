@@ -33,9 +33,9 @@ const Gallery = (props) => {
 
                 {context.list.length=== 0 &&
                     <div className="gallery__empty">
-                        <img className="gallery__emptyimg" src="/data/empty.png"/>
+                        <img className="gallery__emptyimg" src="./data/empty.png"/>
                         <div className="gallery__emptybtn">
-                            <Btn texto={btn1}/>
+                            <Link to="/crear/pasouno"><Btn texto={"CREA UNO"} /></Link>
                         </div>
                     </div>
                 }

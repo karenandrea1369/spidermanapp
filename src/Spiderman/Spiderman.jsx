@@ -22,28 +22,28 @@ const Spiderman = (props) => {
 
             <div className="spiderman__background">
                 <img className="spiderman__backgroundimg" 
-                src={'/data/fondo' + props.fondo + '.png'}/>
+                src={'./data/fondo' + props.fondo + '.png'}/>
 
                 <div className="spiderman__body" >
                     <div className="character__accessory1">
-                        {props.accessory1 && <img src = '/data/accessory1.png'/>}
+                        {props.accessory1 && <img src = './data/accessory1.png'/>}
                     </div>
                     <div className="spiderman__head">
                         {props.mask && 
-                        <img src = {'/data/mascara' + props.suit + '_color' + props.colorOne + '.png'}/>}
-                        {!props.mask && <img src= {'/data/' + props.actor + '.png'} />}
+                        <img src = {'./data/mascara' + props.suit + '_color' + props.colorOne + '.png'}/>}
+                        {!props.mask && <img src= {'./data/' + props.actor + '.png'} />}
                     </div>
                     <div className="spiderman__color1">
-                        <img src={'/data/traje' + props.suit + '_parte1_color' + props.colorOne + '.png'}/>
+                        <img src={'./data/traje' + props.suit + '_parte1_color' + props.colorOne + '.png'}/>
                     </div>
                     <div className="spiderman__color2">
-                        <img src={'/data/traje' + props.suit + '_parte2_color' + props.colorTwo + '.png'}/>
+                        <img src={'./data/traje' + props.suit + '_parte2_color' + props.colorTwo + '.png'}/>
                     </div>
                     <div className="character__accessory2">
-                        {props.accessory2 && <img src = '/data/accessory2.png'/>}
+                        {props.accessory2 && <img src = './data/accessory2.png'/>}
                     </div>
                     <div className="character__accessory3">
-                        {props.accessory3 && <img src = '/data/accessory3.png'/>}
+                        {props.accessory3 && <img src = './data/accessory3.png'/>}
                     </div>
 
                 </div>
