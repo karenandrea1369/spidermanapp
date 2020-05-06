@@ -20,7 +20,7 @@ const Stepfour = (props) => {
 
     const handleFinish = () => {
         const newSpidey = {
-            id : v4(),
+            id : context.config.id,
             name : context.config.name,
             actor : context.config.actor,
             mask : context.config.mask,
@@ -52,6 +52,7 @@ const Stepfour = (props) => {
         });
 
         if(index === -1){
+            newSpidey.id = v4();
             context.setList([
                 ...context.list,
                 newSpidey,
@@ -63,7 +64,7 @@ const Stepfour = (props) => {
                 ...context.list.slice(index+1)
             ]);
         }
-        history.push('/gallery');
+        history.push('/galeria');
     };
 
     return(
