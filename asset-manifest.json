@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/spidermanapp/static/css/main.eb1117fe.chunk.css",
-    "main.js": "/spidermanapp/static/js/main.92b70611.chunk.js",
-    "main.js.map": "/spidermanapp/static/js/main.92b70611.chunk.js.map",
+    "main.css": "/spidermanapp/static/css/main.a7016c46.chunk.css",
+    "main.js": "/spidermanapp/static/js/main.14d81666.chunk.js",
+    "main.js.map": "/spidermanapp/static/js/main.14d81666.chunk.js.map",
     "runtime-main.js": "/spidermanapp/static/js/runtime-main.3111c0db.js",
     "runtime-main.js.map": "/spidermanapp/static/js/runtime-main.3111c0db.js.map",
-    "static/js/2.244c58fa.chunk.js": "/spidermanapp/static/js/2.244c58fa.chunk.js",
-    "static/js/2.244c58fa.chunk.js.map": "/spidermanapp/static/js/2.244c58fa.chunk.js.map",
+    "static/js/2.2d9574b6.chunk.js": "/spidermanapp/static/js/2.2d9574b6.chunk.js",
+    "static/js/2.2d9574b6.chunk.js.map": "/spidermanapp/static/js/2.2d9574b6.chunk.js.map",
     "index.html": "/spidermanapp/index.html",
-    "precache-manifest.75f3dfc9dabf374f5e8796e1b1a6675d.js": "/spidermanapp/precache-manifest.75f3dfc9dabf374f5e8796e1b1a6675d.js",
+    "precache-manifest.21938e01f863321f2b6659f03d9d65ba.js": "/spidermanapp/precache-manifest.21938e01f863321f2b6659f03d9d65ba.js",
     "service-worker.js": "/spidermanapp/service-worker.js",
-    "static/css/main.eb1117fe.chunk.css.map": "/spidermanapp/static/css/main.eb1117fe.chunk.css.map",
-    "static/js/2.244c58fa.chunk.js.LICENSE.txt": "/spidermanapp/static/js/2.244c58fa.chunk.js.LICENSE.txt"
+    "static/css/main.a7016c46.chunk.css.map": "/spidermanapp/static/css/main.a7016c46.chunk.css.map",
+    "static/js/2.2d9574b6.chunk.js.LICENSE.txt": "/spidermanapp/static/js/2.2d9574b6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3111c0db.js",
-    "static/js/2.244c58fa.chunk.js",
-    "static/css/main.eb1117fe.chunk.css",
-    "static/js/main.92b70611.chunk.js"
+    "static/js/2.2d9574b6.chunk.js",
+    "static/css/main.a7016c46.chunk.css",
+    "static/js/main.14d81666.chunk.js"
   ]
 }
