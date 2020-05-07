@@ -32,6 +32,17 @@ function App() {
     setList : setList,
   }
 
+  React.useEffect(()=>{
+    const listString = localStorage.getItem('list');
+    if (listString != null) {
+      setList(JSON.parse(listString));
+    }
+  }, []);
+
+  React.useEffect(()=>{
+    localStorage.setItem('list', JSON.stringify(list))
+  }, [list]);
+
   return (
     <div>
       <SpidermanContext.Provider value = {value}>

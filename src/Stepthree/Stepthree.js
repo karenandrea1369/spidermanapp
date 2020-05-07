@@ -1,99 +1,100 @@
 import React from 'react';
 import './Stepthree.css';
 import { SpidermanContext } from '../utils/SpidermanContext';
+import { useHistory} from 'react-router-dom';
+import { v4 } from 'uuid';
 
 const Stepthree = (props) => {
 
-    var suits = [1,2,3,4];
-    var colors = ['rojo', 'azul', 'negro'];
-
     const context = React.useContext(SpidermanContext);
+    const history = useHistory();
 
-    const handleSuit = (suit) => {
+    var bgs = [1,2,3];
+
+    const handleBg = (fondo) => {
         context.setConfig({
             ...context.config,
-            suit : suit,
+            fondo : fondo,
         })
     };
 
-    const handleColorOne = (colorOne) => {
-        context.setConfig({
-            ...context.config,
-            colorOne : colorOne,
-        })
-    };
+    // const handleFinish = () => {
+    //     const newSpidey = {
+    //         id : context.config.id,
+    //         name : context.config.name,
+    //         actor : context.config.actor,
+    //         mask : context.config.mask,
+    //         accessory1 : context.config.accessory1,
+    //         accessory2 : context.config.accessory2,
+    //         accessory3 : context.config.accessory3,
+    //         suit : context.config.suit,
+    //         colorOne : context.config.colorOne,
+    //         colorTwo : context.config.colorTwo,
+    //         fondo : context.config.fondo,
+    //     };
 
-    const handleColorTwo = (colorTwo) => {
-        context.setConfig({
-            ...context.config,
-            colorTwo : colorTwo,
-        })
-    };
+    //     context.setConfig({
+    //         id : '',
+    //         name : 'Mi primer Spiderman',
+    //         actor : 'tobey',
+    //         mask : true,
+    //         accessory1 : false,
+    //         accessory2 : false,
+    //         accessory3 : false,
+    //         suit : 1,
+    //         colorOne : 'rojo',
+    //         colorTwo : 'azul',
+    //         fondo : 1,
+    //     });
+
+    //     const index = context.list.findIndex((elem) => {
+    //         return elem.id === newSpidey.id;
+    //     });
+
+    //     if(index === -1){
+    //         newSpidey.id = v4();
+    //         context.setList([
+    //             ...context.list,
+    //             newSpidey,
+    //         ]);
+    //     } else {
+    //         context.setList([
+    //             ...context.list.slice(0,index),
+    //             newSpidey,
+    //             ...context.list.slice(index+1)
+    //         ]);
+    //     }
+    //     history.push('/crear/pasocuatro');
+    // };
+
+    const handleFinish = () => {
+        history.push('/crear/pasocuatro');
+    }
 
     return(
         <div>
-            <p>TRAJE</p>
-            <div className="stepthree__suits">
-                {suits.map(suit =>{
-                    return <div className="stepthree__suitbtn">               
-                        {context.config.suit === suit && 
-                            <button className="stepthree__suitbtn--selected" onClick={()=>handleSuit(suit)}>
-                                <img src={'./data/suit' + suit + '.png'}/>
+            <p>FONDO</p>
+            <div className="stepfour__bgs">
+                {bgs.map(bg =>{
+                    return <div className="stepfour__bgbtn">               
+                        {context.config.fondo === bg && 
+                            <button className="stepfour__bgbtn--selected" onClick={()=>handleBg(bg)}>
+                                <img src={'./data/fondo' + bg + '.png'}/>
                             </button>
                         }
 
-                        {context.config.suit !== suit && 
-                            <button onClick={()=>handleSuit(suit)}>
-                                <img src={'./data/suit' + suit + '.png'}/>
+                        {context.config.fondo !== bg && 
+                            <button onClick={()=>handleBg(bg)}>
+                                <img src={'./data/fondo' + bg + '.png'}/>
                             </button>
                         }
                     </div>
                 })}
             </div>
-            
 
-            <div className="stepthree__colors">
-                <div>
-                    <p>COLOR PRIMARIO</p>
-                    <div className="stepthree__colorbuttons">
-                        {colors.map(col =>{
-                            return <div className="stepthree__colorbtn">               
-                                {context.config.colorOne === col && 
-                                    <button className="stepthree__colorbtn--selected" onClick={()=>handleColorOne(col)}>
-                                        <img src={'./data/' + col + 'btn.png'}/>
-                                    </button>
-                                }
-
-                                {context.config.colorOne !== col && 
-                                    <button onClick={()=>handleColorOne(col)}>
-                                        <img src={'./data/' + col + 'btn.png'}/>
-                                    </button>
-                                }
-                            </div>
-                        })}
-                    </div>
-                </div>
-                <div>
-                    <p>COLOR SECUNDARIO</p>
-                    <div className="stepthree__colorbuttons">
-                        {colors.map(col =>{
-                            return <div className="stepthree__colorbtn">               
-                                {context.config.colorTwo === col && 
-                                    <button className="stepthree__colorbtn--selected" onClick={()=>handleColorTwo(col)}>
-                                        <img src={'./data/' + col + 'btn.png'}/>
-                                    </button>
-                                }
-
-                                {context.config.colorTwo !== col && 
-                                    <button onClick={()=>handleColorTwo(col)}>
-                                        <img src={'./data/' + col + 'btn.png'}/>
-                                    </button>
-                                }
-                            </div>
-                        })}
-                    </div>
-                </div>
-            </div>
+            <button onClick={handleFinish}>
+                TERMINAR
+            </button>
         </div>
     );
 

@@ -1,0 +1,21 @@
+.stepone__actors{
+    display: flex;
+}
+
+.stepone__actorbtn{
+    width: 20%;
+    margin: 20px;
+}
+
+.stepone__facebtn{
+    width: 100%;
+    background: none;
+}
+
+.stepone__facebtn img{
+    width: 100%;
+}
+
+.stepone__facebtn--selected{
+    border: olive 2px solid;
+}

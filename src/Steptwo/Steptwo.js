@@ -4,32 +4,31 @@ import { SpidermanContext } from '../utils/SpidermanContext';
 
 const Steptwo = (props) => {
 
-    var actors = ['tobey', 'andrew', 'tom'];
+    var suits = [1,2,3,4];
+    var colors = ['rojo', 'azul', 'negro'];
     var accesories = [1, 2, 3];
-
+    
     const context = React.useContext(SpidermanContext);
 
-    const handleActor = (actor) => {
+    const handleSuit = (suit) => {
+        context.setConfig({
+            ...context.config,
+            suit : suit,
+        })
+    };
 
-        if(context.config.actor === actor){
-            if(context.config.mask){
-                context.setConfig({
-                   ...context.config,
-                   mask : false,
-                })
-            } else {
-                context.setConfig({
-                    ...context.config,
-                    mask : true,
-                }) 
-            }
-        } else if(context.config.actor !== actor){
-             context.setConfig({
-                 ...context.config,
-                 actor : actor,
-                 mask : false,
-             })
-        }
+    const handleColorOne = (colorOne) => {
+        context.setConfig({
+            ...context.config,
+            colorOne : colorOne,
+        })
+    };
+
+    const handleColorTwo = (colorTwo) => {
+        context.setConfig({
+            ...context.config,
+            colorTwo : colorTwo,
+        })
     };
 
     const handleAccessory = (accessory) => {
@@ -43,24 +42,68 @@ const Steptwo = (props) => {
 
     return(
         <div>
-            <p>ESCOGE TU ACTOR FAVORITO</p>
 
-            <div className="steptwo__actors">
-                {actors.map(actor =>{
-                    return <div className="steptwo__actorbtn">               
-                        {!context.config.mask && context.config.actor === actor &&
-                        <button className="steptwo__facebtn steptwo__facebtn--selected" onClick={()=>handleActor(actor)}>
-                            <img src={'./data/' + actor + 'btn.png'} />
-                        </button>
+            <p>TRAJE</p>
+            <div className="stepthree__suits">
+                {suits.map(suit =>{
+                    return <div className="stepthree__suitbtn">               
+                        {context.config.suit === suit && 
+                            <button className="stepthree__suitbtn--selected" onClick={()=>handleSuit(suit)}>
+                                <img src={'./data/suit' + suit + '.png'}/>
+                            </button>
                         }
 
-                        {(context.config.mask || context.config.actor !== actor) &&
-                        <button className="steptwo__facebtn" onClick={()=>handleActor(actor)}>
-                            <img src={'./data/' + actor + 'btn.png'} />
-                        </button>
+                        {context.config.suit !== suit && 
+                            <button onClick={()=>handleSuit(suit)}>
+                                <img src={'./data/suit' + suit + '.png'}/>
+                            </button>
                         }
                     </div>
                 })}
+            </div>
+            
+
+            <div className="stepthree__colors">
+                <div>
+                    <p>COLOR PRIMARIO</p>
+                    <div className="stepthree__colorbuttons">
+                        {colors.map(col =>{
+                            return <div className="stepthree__colorbtn">               
+                                {context.config.colorOne === col && 
+                                    <button className="stepthree__colorbtn--selected" onClick={()=>handleColorOne(col)}>
+                                        <img src={'./data/' + col + 'btn.png'}/>
+                                    </button>
+                                }
+
+                                {context.config.colorOne !== col && 
+                                    <button onClick={()=>handleColorOne(col)}>
+                                        <img src={'./data/' + col + 'btn.png'}/>
+                                    </button>
+                                }
+                            </div>
+                        })}
+                    </div>
+                </div>
+                <div>
+                    <p>COLOR SECUNDARIO</p>
+                    <div className="stepthree__colorbuttons">
+                        {colors.map(col =>{
+                            return <div className="stepthree__colorbtn">               
+                                {context.config.colorTwo === col && 
+                                    <button className="stepthree__colorbtn--selected" onClick={()=>handleColorTwo(col)}>
+                                        <img src={'./data/' + col + 'btn.png'}/>
+                                    </button>
+                                }
+
+                                {context.config.colorTwo !== col && 
+                                    <button onClick={()=>handleColorTwo(col)}>
+                                        <img src={'./data/' + col + 'btn.png'}/>
+                                    </button>
+                                }
+                            </div>
+                        })}
+                    </div>
+                </div>
             </div>
 
             {/* ---------------Accesorios---------------- */}

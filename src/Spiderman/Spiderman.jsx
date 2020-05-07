@@ -15,12 +15,12 @@ const Spiderman = (props) => {
 //    }
 
     return(
-        <div className="spiderman__container">
+        <div className="spiderman__container" >
             <div className="spiderman__charactername">
                 <p>{props.name}</p>
             </div>
 
-            <div className="spiderman__background">
+            <div className="spiderman__background" id="download">
                 <img className="spiderman__backgroundimg" 
                 src={'./data/fondo' + props.fondo + '.png'}/>
 

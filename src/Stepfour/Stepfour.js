@@ -3,20 +3,22 @@ import './Stepfour.css';
 import { SpidermanContext } from '../utils/SpidermanContext';
 import { useHistory} from 'react-router-dom';
 import { v4 } from 'uuid';
+import { saveAs } from 'file-saver';
+/* in ES 6 */
+import domtoimage from 'dom-to-image';
+
 
 const Stepfour = (props) => {
+    var FileSaver = require('file-saver');
 
     const context = React.useContext(SpidermanContext);
     const history = useHistory();
+    var node = document.querySelector('prueba');
 
-    var bgs = [1,2,3];
+    //var domtoimage = require('dom-to-image');
 
-    const handleBg = (fondo) => {
-        context.setConfig({
-            ...context.config,
-            fondo : fondo,
-        })
-    };
+    // var bgs = [1,2,3];
+
 
     const handleFinish = () => {
         const newSpidey = {
@@ -67,29 +69,32 @@ const Stepfour = (props) => {
         history.push('/galeria');
     };
 
+    const handleDownload = () => {
+        // domtoimage.toPng(node)
+        // .then(function (dataUrl) {
+        //     var img = new Image();
+        //     img.src = dataUrl;
+        //     document.body.appendChild(img);
+        // })
+        // .catch(function (error) {
+        //     console.error('oops, something went wrong!', error);
+        // });
+
+        domtoimage.toBlob(document.getElementById('download'))
+        .then(function (blob) {
+            window.saveAs(blob, context.config.name + '.png');
+        });
+    };
+
     return(
-        <div>
-            <p>FONDO</p>
-            <div className="stepfour__bgs">
-                {bgs.map(bg =>{
-                    return <div className="stepfour__bgbtn">               
-                        {context.config.fondo === bg && 
-                            <button className="stepfour__bgbtn--selected" onClick={()=>handleBg(bg)}>
-                                <img src={'./data/fondo' + bg + '.png'}/>
-                            </button>
-                        }
+        <div className="pruebaxde">
+            
+            <button onClick = {handleFinish}>
+                GUARDAR PERSONAJE
+            </button>
 
-                        {context.config.fondo !== bg && 
-                            <button onClick={()=>handleBg(bg)}>
-                                <img src={'./data/fondo' + bg + '.png'}/>
-                            </button>
-                        }
-                    </div>
-                })}
-            </div>
-
-            <button onClick={handleFinish}>
-                FINALIZAR
+            <button onClick = {handleDownload}>
+                DESCARGAR
             </button>
 
         </div>

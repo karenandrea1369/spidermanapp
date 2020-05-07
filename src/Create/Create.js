@@ -57,7 +57,7 @@ const Create = (props) => {
                     <Link to="/crear/pasouno"><img src="./data/createbtn.png"/></Link>
                     <Link to="/crear/pasodos"><img src="./data/createbtn.png"/></Link>
                     <Link to="/crear/pasotres"><img src="./data/createbtn.png"/></Link>
-                    <Link to="/crear/pasocuatro"><img src="./data/createbtn.png"/></Link>
+                    {/* <Link to="/crear/pasocuatro"><img src="./data/createbtn.png"/></Link> */}
                     
                 </div>
             </div>
