@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/spidermanapp/static/css/main.fc9ed798.chunk.css",
-    "main.js": "/spidermanapp/static/js/main.a8779000.chunk.js",
-    "main.js.map": "/spidermanapp/static/js/main.a8779000.chunk.js.map",
+    "main.css": "/spidermanapp/static/css/main.8a375a4c.chunk.css",
+    "main.js": "/spidermanapp/static/js/main.d9d5776c.chunk.js",
+    "main.js.map": "/spidermanapp/static/js/main.d9d5776c.chunk.js.map",
     "runtime-main.js": "/spidermanapp/static/js/runtime-main.3111c0db.js",
     "runtime-main.js.map": "/spidermanapp/static/js/runtime-main.3111c0db.js.map",
-    "static/js/2.6f260152.chunk.js": "/spidermanapp/static/js/2.6f260152.chunk.js",
-    "static/js/2.6f260152.chunk.js.map": "/spidermanapp/static/js/2.6f260152.chunk.js.map",
+    "static/js/2.99977a40.chunk.js": "/spidermanapp/static/js/2.99977a40.chunk.js",
+    "static/js/2.99977a40.chunk.js.map": "/spidermanapp/static/js/2.99977a40.chunk.js.map",
     "index.html": "/spidermanapp/index.html",
-    "precache-manifest.ab9e32fcaa771c288f366eb4cdeeffce.js": "/spidermanapp/precache-manifest.ab9e32fcaa771c288f366eb4cdeeffce.js",
+    "precache-manifest.8dafed4b59e3ba19cc8fa6ffcdfc7b7e.js": "/spidermanapp/precache-manifest.8dafed4b59e3ba19cc8fa6ffcdfc7b7e.js",
     "service-worker.js": "/spidermanapp/service-worker.js",
-    "static/css/main.fc9ed798.chunk.css.map": "/spidermanapp/static/css/main.fc9ed798.chunk.css.map",
-    "static/js/2.6f260152.chunk.js.LICENSE.txt": "/spidermanapp/static/js/2.6f260152.chunk.js.LICENSE.txt"
+    "static/css/main.8a375a4c.chunk.css.map": "/spidermanapp/static/css/main.8a375a4c.chunk.css.map",
+    "static/js/2.99977a40.chunk.js.LICENSE.txt": "/spidermanapp/static/js/2.99977a40.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3111c0db.js",
-    "static/js/2.6f260152.chunk.js",
-    "static/css/main.fc9ed798.chunk.css",
-    "static/js/main.a8779000.chunk.js"
+    "static/js/2.99977a40.chunk.js",
+    "static/css/main.8a375a4c.chunk.css",
+    "static/js/main.d9d5776c.chunk.js"
   ]
 }
